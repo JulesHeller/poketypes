@@ -1,0 +1,190 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Alexandria', sans-serif;
+    background: url(/assets/img/bg.jpg);
+    box-shadow: inset 0 0 0 10000px #ffffffbb;
+    background-repeat: repeat;
+}
+
+main {
+    max-width: 1000px;
+    padding: 0 40px;
+}
+
+.top {
+    display: flex;
+
+    .type-choices {
+        width: 100%;
+        flex: 3;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .type-choice {
+            padding: 8px 12px;
+            background: var(--color);
+            color: white;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .disabled {
+            opacity: .2;
+            pointer-events: none;
+        }
+    }
+
+    .slots {
+        flex: 1;
+        text-align: center;
+
+        span {
+            text-transform: capitalize;
+        }
+    }
+}
+
+
+.affinities {
+    margin-top: 30px;
+
+    .affinity {
+        min-height: 71.5px;
+        width: 100%;
+        font-size: 1em;
+        display: grid;
+        grid-template-columns: 80px 1fr;
+
+        &>span {
+            display: block;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .label {
+            font-weight: 600;
+            text-align: center;
+            border-bottom: 2px #00000057 solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .types {
+            border-bottom: 2px #00000022 solid;
+            // border-right: 2px #00000022 solid;
+            background: #fff;
+            display: flex;
+            flex-wrap: wrap;
+
+            .type {
+                padding: 5px 8px;
+                text-transform: uppercase;
+            }
+        }
+
+        &.x4 .label {
+            background: #e20d0d;
+            color: #fff;
+        }
+
+        &.x2 .label {
+            background: #ed7655;
+        }
+
+        &.x1 .label {
+            background: #ded8d8;
+        }
+
+        &.x05 .label {
+            background: #65a6dc;
+        }
+
+        &.x025 .label {
+            background: #393e82;
+            color: #fff;
+        }
+
+        &.x0 .label {
+            background: #000000;
+            color: #fff;
+        }
+    }
+}
+
+.normal {
+    --color: #9299a0
+}
+
+.fire {
+    --color: #f1a162
+}
+
+.water {
+    --color: #5d8ecf
+}
+
+.grass {
+    --color: #79b966
+}
+
+.electric {
+    --color: #eed35a
+}
+
+.ice {
+    --color: #8accc0
+}
+
+.fighting {
+    --color: #be4b6a
+}
+
+.poison {
+    --color: #a26dc3
+}
+
+.ground {
+    --color: #cc7c50
+}
+
+.flying {
+    --color: #97a9da
+}
+
+.psychic {
+    --color: #e8797a
+}
+
+.bug {
+    --color: #9ac049
+}
+
+.rock {
+    --color: #c4b890
+}
+
+.ghost {
+    --color: #5768a7
+}
+
+.dragon {
+    --color: #306bbe
+}
+
+.dark {
+    --color: #595365
+}
+
+.steel {
+    --color: #668d9f
+}
+
+.fairy {
+    --color: #df93e1
+}

@@ -12,7 +12,6 @@ fetch('./assets/json/types.json')
                     type1 = e.dataset.type;
                     document.querySelector("." + type1).classList.add("disabled")
                     document.querySelector(".type1").innerText = type1
-                    console.log("choose1")
                     displayAffinities()
                 } else {
                     type2 = e.dataset.type;
@@ -20,7 +19,6 @@ fetch('./assets/json/types.json')
                         e.classList.add("disabled")
                     })
                     document.querySelector(".type2").innerText = type2;
-                    console.log("choose2")
                     displayAffinities();
                 }
             })
@@ -30,15 +28,9 @@ fetch('./assets/json/types.json')
         let aff2;
 
         function displayAffinities() {
-            console.log("type1: " + type1)
-            console.log("type2: " + type2)
-
-            document.querySelector(".x4 .types").innerHTML = "";
-            document.querySelector(".x2 .types").innerHTML = "";
-            document.querySelector(".x1 .types").innerHTML = "";
-            document.querySelector(".x05 .types").innerHTML = "";
-            document.querySelector(".x025 .types").innerHTML = "";
-            document.querySelector(".x0 .types").innerHTML = "";
+            document.querySelectorAll(".affinity .types").forEach(e => {
+                e.innerHTML = "";  
+            })
 
             if (type2 == null) {
                 data.forEach(e => {

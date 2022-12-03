@@ -76,11 +76,11 @@ fetch('/assets/json/types.json')
                     }
                 })
 
-                for(let i = 0; i < aff2.length + 1; i++) {
+                for(let i = 0; i < aff2.length; i++) {
                     multiValue = aff1[i].value * aff2[i].value;
                     switch (multiValue) {
                         case 4:
-                            document.querySelector(".4 .types").innerHTML += `<div class='type'><span>${aff1[i].type}</span></div>`
+                            document.querySelector(".x4 .types").innerHTML += `<div class='type'><span>${aff1[i].type}</span></div>`
                             break;
                         case 2:
                             document.querySelector(".x2 .types").innerHTML += `<div class='type'><span>${aff1[i].type}</span></div>`

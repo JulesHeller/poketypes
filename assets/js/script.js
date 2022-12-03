@@ -7,20 +7,19 @@ fetch('./assets/json/types.json')
 
         document.querySelectorAll(".type-choice").forEach(e => {
             e.addEventListener("click", () => {
-
                 if (type1 == null) {
                     type1 = e.dataset.type;
                     document.querySelector("." + type1).classList.add("disabled")
                     document.querySelector(".type1").innerText = type1
                     displayAffinities()
-                } else {
-                    type2 = e.dataset.type;
-                    document.querySelectorAll(".type-choice").forEach(e => {
-                        e.classList.add("disabled")
-                    })
-                    document.querySelector(".type2").innerText = type2;
-                    displayAffinities();
+                    return;
                 }
+                type2 = e.dataset.type;
+                document.querySelectorAll(".type-choice").forEach(e => {
+                    e.classList.add("disabled")
+                })
+                document.querySelector(".type2").innerText = type2;
+                displayAffinities();
             })
         })
 
@@ -29,7 +28,7 @@ fetch('./assets/json/types.json')
 
         function displayAffinities() {
             document.querySelectorAll(".affinity .types").forEach(e => {
-                e.innerHTML = "";  
+                e.innerHTML = "";
             })
 
             if (type2 == null) {
@@ -68,7 +67,7 @@ fetch('./assets/json/types.json')
                     }
                 })
 
-                for(let i = 0; i < aff2.length; i++) {
+                for (let i = 0; i < aff2.length; i++) {
                     multiValue = aff1[i].value * aff2[i].value;
                     switch (multiValue) {
                         case 4:

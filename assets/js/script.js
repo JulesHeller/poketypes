@@ -1,4 +1,4 @@
-fetch('/assets/json/types.json')
+fetch('../json/types.json')
     .then(response => response.json())
     .then(function (data) {
         let type1 = null;

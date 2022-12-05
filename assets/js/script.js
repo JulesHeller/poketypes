@@ -5,6 +5,24 @@ fetch('./assets/json/types.json')
         let type2 = null;
         // let allTypes = ["normal", "fire", "water", "grass", "electric", "ice", "fighting", "poison", "ground", "flying", "psychic", "bug", "rock", "ghost", "dragon", "dark", "steel", "fairy"];
 
+        document.querySelector(".reload").addEventListener("click", reload)
+
+        function reload() {
+            console.log("test")
+            type1 = null;
+            type2 = null;
+            document.querySelectorAll(".type-choice").forEach(e=> {
+                e.classList.remove("disabled")
+            })
+            document.querySelector(".type1").innerText = ""
+            document.querySelector(".type2").innerText = ""
+
+            document.querySelectorAll(".affinity .types").forEach(e => {
+                e.innerHTML = "";
+            })
+
+        }
+
         document.querySelectorAll(".type-choice").forEach(e => {
             e.addEventListener("click", () => {
                 if (type1 == null) {

@@ -267,11 +267,11 @@
             },
             {
                 "type": "ground",
-                "value": 2
+                "value": 0.5
             },
             {
                 "type": "flying",
-                "value": 0.5
+                "value": 2
             },
             {
                 "type": "psychic",
